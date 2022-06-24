@@ -65,7 +65,7 @@ next_bit:
 
 update_byte:
         xchg    ch, [edx]
-        xor     ecx, ecx        ; cl=0, ch=0
+        or     ecx, ecx        ; cl=0, ch=0
         inc     edx             ; move pointer to next byte
         jmp     main_loop
 
